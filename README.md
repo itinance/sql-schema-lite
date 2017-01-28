@@ -2,19 +2,21 @@
 
 ## Motivation:
 
-This is something like a SQL-Builder primarily the context of mobile applications or web
-applications using Sqlite3.
+This is something like a SQL-Builder primarily in the context of mobile applications or web
+applications using Sqlite3, which is present on mobile devices and in any modern web browser.
+
 It takes concrete schema definitions and supports the developer with building
 specific SQL-statements like SELECT, UPDATE, INSERT, DELETE.
+(DDL-statements like CREATE TABLE/ALTER TABLE are coming soon)
 
-This library is NOT an ORM-implementation ([Object relational mapper](https://en.wikipedia.org/wiki/Object-relational_mapping)), but is the
+The sqlite-schema-lite library is supposed to be a loosely coupled SQL builder library
+without any bindings to concrete OS-related or database-related implementations, but
+can be used as a base library around SQL-statement building for those advanced implementations.
+
+That means, this library is NOT an ORM-implementation ([Object relational mapper](https://en.wikipedia.org/wiki/Object-relational_mapping)), but it is the
 outsourced part of a ReactNative-specific library [react_native_sqlite_orm](https://github.com/itinance/react_native_sqlite_orm)
 on top of [react-native-sqlite-storage](https://github.com/andpor/react-native-sqlite-storage/) supporting sqlite3 for both
-iOS and Android, that is currently under heavy development and not being published (coming soon).
-
-This sqlite-schema-lite library is supposed to be a loosely coupled SQL builder library
-without any bindings to concrete OS-releated or database-releated implementations, but
-can be used as a base library around SQL-statement building for those advanced implementations.
+iOS and Android, that is currently under heavy development and not being published yet (coming very soon).
 
 ## Installation:
 
