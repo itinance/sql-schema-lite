@@ -50,7 +50,7 @@ Or if you're still using npm:
 npm i
 jest
 ```
- 
+
 
 ## Examples:
 
@@ -136,5 +136,7 @@ In case of submitting pull requests (highly appreciated) please keep in mind tha
 ## Author
 
 Hagen Hübel, Munich/Starnberg, Germany
-Fullstacker, massive ReactNative developer & consultant
+
+Fullstacker, currently massive ReactNative developer & consultant
+
 [LinkedIn](https://www.linkedin.com/in/hagenhuebel)
