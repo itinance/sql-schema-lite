@@ -1,0 +1,43 @@
+{
+  "name": "sql-schema-lite",
+  "version": "0.1.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itinance/sql-schema-lite.git"
+  },
+  "keywords": [
+    "sql",
+    "sqlite",
+    "sqlite3",
+    "sqlbuilder",
+    "orm"
+  ],
+  "author": "Hagen Hübel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/itinance/sql-schema-lite/issues"
+  },
+  "homepage": "https://github.com/itinance/sql-schema-lite#readme",
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "jest": {
+    "modulePathIgnorePatterns": [
+      "node_modules/",
+      "__tests__/fixtures/"
+    ]
+  },
+  "devDependencies": {
+    "babel-core": "^6.22.1",
+    "babel-jest": "^18.0.0",
+    "babel-preset-es2015": "^6.22.0",
+    "jest-cli": "^18.1.0"
+  }
+}
