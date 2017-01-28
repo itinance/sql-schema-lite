@@ -27,3 +27,12 @@ it('Build SELECT-statement with selection by ID and with parameter injection', (
     'SELECT id,first_name,last_name,street,postalcode,city FROM contact WHERE id=101'
   )
 });
+
+it('Build SELECT-statement with selection by ID and with alphanumeric parameter injection', () => {
+  const schema = new ModelSchema( schemaContact )
+  const sql = new SqlBuilder(schema)
+
+  expect(sql.select('1337-ddde-1233122', true)).toBe(
+    "SELECT id,first_name,last_name,street,postalcode,city FROM contact WHERE id='1337-ddde-1233122'"
+  )
+});
