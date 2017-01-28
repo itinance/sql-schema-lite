@@ -84,7 +84,7 @@ Let's create SQL-statements for SELECT, INSERT, UPDATE, DELETE automatically:
 
 ```javascript
 const schema = new ModelSchema( schemaContact )
-const sql = new SqlGenerator(schema)
+const sql = new SqlBuilder(schema)
 
 const entity = {
   id: 10,
