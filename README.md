@@ -8,7 +8,7 @@
 
 Define a schema per JS or JSON:
 
-```
+```javascript
 const schemaContact = {
   name: 'contact',
   defaultVersion: 1,
@@ -52,7 +52,7 @@ const schemaContact = {
 
 Let's create SQL-statements for SELECT, INSERT, UPDATE, DELETE automatically:
 
-```
+```javascript
 const schema = new ModelSchema( schemaContact )
 const sql = new SqlGenerator(schema)
 
@@ -72,7 +72,7 @@ update() returns a plain object containing the SQL-statement as is with prepared
 and the parameter-array containing all parameters. It takes note of primary keys
 and use them as WHERE-statement for a specific record update:
 
-```
+```javascript
 {
   stmt: 'UPDATE contact SET first_name=?, last_name=?, street=?, postalcode=?, city=? WHERE id=?',
   params: ['Alfons', 'Zitterbacke', 'Friedenseck 8', '15232', 'Frankfurt (Oder)', 10]
