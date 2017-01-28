@@ -34,13 +34,12 @@ it('SqlGenerator can generate UPDATE-statement correctly', () => {
     city: 'Frankfurt (Oder)'
   }
 
-  const stmt = `
-  UPDATE contact SET first_name=?, last_name=?, street=?, postalcode=?, city=? WHERE id=?
-  `.trim()
+  const result = {
+    stmt: 'UPDATE contact SET first_name=?, last_name=?, street=?, postalcode=?, city=? WHERE id=?',
+    params: ['Alfons', 'Zitterbacke', 'Friedenseck 8', '15232', 'Frankfurt (Oder)', 10]
+  }
 
-  const params = ['Alfons', 'Zitterbacke', 'Friedenseck 8', '15232', 'Frankfurt (Oder)', 10]
-
-  expect(sql.update(entity)).toEqual({stmt, params})
+  expect(sql.update(entity)).toEqual(result)
 });
 
 it('SqlGenerator can generate INSERT-statement correctly', () => {
