@@ -9,3 +9,21 @@ it('SqlBuilder can generate SELECT-statement correctly', () => {
 
   expect(sql.select()).toBe('SELECT id,first_name,last_name,street,postalcode,city FROM contact')
 });
+
+it('SqlBuilder can generate SELECT-statement correctly for a specific record per primaryKey', () => {
+  const schema = new ModelSchema( schemaContact )
+  const sql = new SqlBuilder(schema)
+
+  expect(sql.select(101)).toBe(
+    'SELECT id,first_name,last_name,street,postalcode,city FROM contact WHERE id=?'
+  )
+});
+
+it('Build SELECT-statement with selection by ID and with parameter injection', () => {
+  const schema = new ModelSchema( schemaContact )
+  const sql = new SqlBuilder(schema)
+
+  expect(sql.select(101, true)).toBe(
+    'SELECT id,first_name,last_name,street,postalcode,city FROM contact WHERE id=101'
+  )
+});
