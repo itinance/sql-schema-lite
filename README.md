@@ -34,6 +34,24 @@ via npm:
 npm install --save sqlite-schema-lite
 ```
 
+## Running tests
+
+Tests are written with [jest](https://github.com/facebook/jest/). You need to install
+the [jest-client](https://www.npmjs.com/package/jest-cli) best globally: npm install jest-cli.
+
+```
+yarn install
+jest
+```
+
+Or if you're still using npm:
+
+```
+npm i
+jest
+```
+ 
+
 ## Examples:
 
 Define a schema per JS or JSON:
