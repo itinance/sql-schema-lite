@@ -2,7 +2,33 @@
 
 ## Motivation:
 
-(to be continued)
+This is something like a SQL-Builder primarily the context of mobile applications or web
+applications using Sqlite3.
+It takes concrete schema definitions and supports the developer with building
+specific SQL-statements like SELECT, UPDATE, INSERT, DELETE.
+
+This library is NOT an ORM-implementation ([Object relational mapper](https://en.wikipedia.org/wiki/Object-relational_mapping)), but is the
+outsourced part of a ReactNative-specific library [react_native_sqlite_orm](https://github.com/itinance/react_native_sqlite_orm)
+on top of [react-native-sqlite-storage](https://github.com/andpor/react-native-sqlite-storage/) supporting sqlite3 for both
+iOS and Android, that is currently under heavy development and not being published (coming soon).
+
+This sqlite-schema-lite library is supposed to be a loosely coupled SQL builder library
+without any bindings to concrete OS-releated or database-releated implementations, but
+can be used as a base library around SQL-statement building for those advanced implementations.
+
+## Installation:
+
+via yarn:
+
+```
+yarn add sqlite-schema-lite
+```
+
+via npm:
+
+```
+npm install --save sqlite-schema-lite
+```
 
 ## Examples:
 
@@ -78,3 +104,15 @@ and use them as WHERE-statement for a specific record update:
   params: ['Alfons', 'Zitterbacke', 'Friedenseck 8', '15232', 'Frankfurt (Oder)', 10]
 }
 ```
+
+## Contribution:
+
+Contributors are welcome! Feel free to submit pull requests or open [discussions](https://github.com/itinance/sql-schema-lite/issues).
+
+In case of submitting pull requests (highly appreciated) please keep in mind that we are [test driven] (https://github.com/itinance/sql-schema-lite/tree/master/__tests__).
+
+## Author
+
+Hagen Hübel, Munich/Starnberg, Germany
+Fullstacker, massive ReactNative developer & consultant
+[LinkedIn](https://www.linkedin.com/in/hagenhuebel)
